@@ -1,7 +1,7 @@
 $(function() {
     console.log('Paso por aquí');
     $("#listar").on("click", function() {
-        $.get("https://my-json-server.typicode.com/desarrollo-seguro/proyecto17/solicitudes", function(data) {
+        $.get("https://my-json-server.typicode.com/proyectos/proyecto17.1/solicitudes", function(data) {
             $("#resListar").text("Ok");
             $("#resListar").attr("data-midato", data);
             console.log(data);
@@ -9,7 +9,7 @@ $(function() {
         
     });
     $("#leer").on("click", function() {
-        $.get("https://my-json-server.typicode.com/desarrollo-seguro/proyecto17/solicitudes/1", function(data) {
+        $.get("https://my-json-server.typicode.com/proyectos/proyecto17.1/solicitudes/1", function(data) {
             $("#resLeer").text("Ok"); 
             console.log(data);
         })
@@ -19,7 +19,7 @@ $(function() {
 
     $('#crear').on('click',function() {
         $.ajax({
-            url: "https://my-json-server.typicode.com/desarrollo-seguro/proyecto17/solicitudes",
+            url: "https://my-json-server.typicode.com/proyectos/proyecto17.1/solicitudes",
             method: "POST",
             "data": JSON.stringify({
                 id: 0,
