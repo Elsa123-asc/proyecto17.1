@@ -1,16 +1,16 @@
+
 $(function() {
-    console.log('Paso por aquí');
-    $("#listar").on("click", function() {
-        $.get("https://my-json-server.typicode.com/proyectos/proyecto17.1/solicitudes", function(data) {
-            $("#resListar").text("Ok");
-            $("#resListar").attr("data-midato", data);
+    console.on("click");
+    $("#Actualizar").on("click", function() {
+        $.get("https://my-json-server.typicode.com/desarrollo-seguro/dato/solicitudes", function(data) {
+            $("#resActualizar").attr("mostrarocultar", data);
             console.log(data);
         })
         
     });
-    $("#leer").on("click", function() {
-        $.get("https://my-json-server.typicode.com/proyectos/proyecto17.1/solicitudes/1", function(data) {
-            $("#resLeer").text("Ok"); 
+    $("#Actualizar").on("click", function() {
+        $.get("https://my-json-server.typicode.com/desarrollo-seguro/dato/solicitudes", function(data) {
+            $("#resActualizar").text("Ok"); 
             console.log(data);
         })
         
@@ -19,12 +19,12 @@ $(function() {
 
     $('#crear').on('click',function() {
         $.ajax({
-            url: "https://my-json-server.typicode.com/proyectos/proyecto17.1/solicitudes",
+            url: "https://my-json-server.typicode.com/desarrollo-seguro/dato/solicitudes",
             method: "POST",
             "data": JSON.stringify({
                 id: 0,
-                nombre: "Juan",
-                apellido: "Otro"
+                nombre: "Fernando",
+                apellido: "Alguno"
             }),
             success: function(data) {
                 $("#resCrear").text("Ok"); 
@@ -39,11 +39,11 @@ $(function() {
 
     $('#actualizar').on('click',function() {
         $.ajax({
-            url: "https://my-json-server.typicode.com/desarrollo-seguro/proyecto17/solicitudes/2",
+            url: "https://my-json-server.typicode.com/desarrollo-seguro/dato/solicitudes",
             method: "PUT",
             "data": JSON.stringify({
                 id: 1,
-                nombre: "Juan",
+                nombre: "Nico",
                 apellido: "Otro"
             }),
             success: function(data) {
@@ -58,7 +58,7 @@ $(function() {
 
     $('#borrar').on('click',function() {
         $.ajax({
-            url: "https://my-json-server.typicode.com/desarrollo-seguro/proyecto17/solicitudes/1",
+            url: "https://my-json-server.typicode.com/desarrollo-seguro/dato/solicitudes",
             method: "DELETE",
             success: function(data) {
                 $("#resBorrar").text("Ok"); 
